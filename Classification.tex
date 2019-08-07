@@ -22,7 +22,7 @@ $\nabla_w l_H(w;y,x) =
     0 &\text{if } _i w^T x_i \geq 1\\
     -y_i x_i &\text{otherwise}
 \end{cases}$\\
-$w^* = \underset{w}{\operatorname{argmin}} ~ l_H(w;x_i,y_i) + \lambda||w||_2^2$\\ For L1-SVM (feature selection) use $||w||_1$ 
+$w^* = \underset{w}{\operatorname{argmin}} ~ \frac{1}{n} l_H(w;x_i,y_i) + \lambda||w||_2^2$\\ For L1-SVM (feature selection) use $||w||_1$ 
 
 \subsection*{Multiple classes}
 One-vs-all: $c$ classifiers, could lead to class imbalance, might not be linearly seperable\\
