@@ -18,7 +18,7 @@ M-step: Compute the MLE: $\theta^{(t)} = \underset{\theta}{\operatorname{argmax}
 
 \subsection*{Soft-EM algorithm}
 E-step: Calc p for each point and cls.: $\gamma_j^{(t)}(x_i)$\\
-M-step: Fit clusters to weighted data points:\\
+M-step: Fit clusters to weighted data points by taking the derivative with the respective parameter and setting it to 0:\\
 $w_j^{(t)} = \frac{1}{n} \sum_{i=1}^n \gamma_j^{(t)} (x_i)$; 
 $\mu_j^{(t)} = \frac{\sum_{i=1}^n \gamma_j^{(t)} (x_i) x_i}{\sum_{i=1}^n \gamma_j^{(t)} (x_i)}\\ %\text{|learning with GMMs } ^t = ^*\\
 \sigma_j^{(t)} = \frac{\sum_{i=1}^n \gamma_j^{(t)}(x_i) (x_i - \mu_j^{(t)})^T (x_i - \mu_j^{(t)})}{\sum_{i=1}^n \gamma_j^{(t)}(x_i)}$\\
