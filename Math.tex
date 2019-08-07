@@ -15,7 +15,7 @@ $P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$
 \subsection*{P-Norm}
 $||x||_p = (\sum_{i=1}^n|x_i|^p)^{\frac{1}{p}}$, $1 \leq p < \infty$
 
-\subsection*{Some gradients}
+\subsection*{Gradients}
 $\nabla_x ||x||_2^2 = 2 x$\\
 $f(x) = x^T A x$; $\nabla_x f(x) = (A + A^T) x$\\
 E.g. $\nabla_w \operatorname{log}(1+\operatorname{exp(-y w^T x)}) = \\
@@ -33,9 +33,3 @@ $f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} exp(-\frac{(x-\mu)^2}{2\sigma^2})$
 $\Sigma =$ covariance matrix, $\mu$ = mean\\
 $f(x) = \frac{1}{2\pi \sqrt{|\Sigma|}} e^{- \frac{1}{2} (x-\mu)^T \Sigma^{-1} (x-\mu)}$\\
 Empirical: $\Sigma = \frac{1}{n}\sum_{i=1}^n x_i x_i^T$ (needs centered data points)
-
-\subsection*{Positive semi-definite matrices}
-$M \in \mathbb{R}^{n\times n}$ is psd $\Leftrightarrow$\\
-$\forall x \in \mathbb{R}^n: x^TMx \geq 0 \Leftrightarrow$\\
-all eigenvalues of $M$ are positive: $\lambda_i\geq 0$
-

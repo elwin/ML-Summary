@@ -4,7 +4,7 @@
 Data is iid for unknown $P$: $(x_i, y_i) \sim P(X,Y)$
 
 \subsection*{True risk and estimated error}
-True risk (Generatlization Error): $R(w) = \int P(x,y) (y-w^Tx)^2 \partial x \partial y = \mathbb{E}_{x,y}[(y-w^Tx)^2]$ \\
+True risk (Generalization  Error): $R(w) = \int P(x,y) (y-w^Tx)^2 \partial x \partial y = \mathbb{E}_{x,y}[(y-w^Tx)^2]$ \\
 Est. error: $\hat{R}_D(w) = \frac{1}{|D|}\sum_{(x,y)\in D} (y-w^Tx)^2$
 
 \subsection*{Standardization}
@@ -24,4 +24,5 @@ e.g. k-NN
 
 \subsection*{Stochastic Gradient Descent (SGD)}
 1. Pick arbitrary $w_0 \in \mathbb{R}^d$\\
-2. $w_{t+1} = w_t - \eta_t \nabla_w l(w_t;x',y')$, with u.a.r.\\ data point $(x',y') \in D$
+2. $w_{t+1} = w_t - \eta_t \nabla_w l(w_t;x',y')$, with u.a.r.\\ data point $(x',y') \in D$\\
+Converges if $\sum \eta_t = \infty$, $\sum \eta_t^2 < \infty$

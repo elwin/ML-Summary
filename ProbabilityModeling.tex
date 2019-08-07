@@ -8,8 +8,13 @@ Pred.: $\hat{y} = \hat{\mathbb{E}}[Y|X=\hat{x}] = \int \hat{P}(y|X=\hat{x}) y \p
 
 \subsection*{Maximum Likelihood Estimation (MLE)}
 $\theta^* = \underset{\theta}{\operatorname{argmax}} ~ \hat{P}(y_1,...,y_n|x_1,...,x_n,\theta)$\\
+$= \underset{\theta}{\operatorname{argmax}} \prod_{i=1}^n \hat{P}(y_i|x_i, \theta) \text{\quad (iid)}$\\
+$= \underset{\theta}{\operatorname{argmin}} - \sum_{i=1}^n log \hat{P}(y_i|x_i,\theta)$\\
 E.g. lin. + Gauss: $y_i = w^T x_i + \varepsilon_i, \varepsilon_i \sim \mathcal{N}(0, \sigma^2)$\\
-i.e. $y_i \sim \mathcal{N}(w^T x_i, \sigma^2)$, With MLE (use\\ $\operatorname{argmin} ~ - \operatorname{log}$): $w^* = \underset{w}{\operatorname{argmin}} \sum (y_i-w^Tx_i)^2$
+i.e. $y_i \sim \mathcal{N}(w^T x_i, \sigma^2)$\\
+$\underset{w}{\operatorname{argmax}} P(y_1,...,y_n|x_1,...,x_n,w)\\
+= \underset{w}{\operatorname{argmax}} \prod \limits_i \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{1}{2} \frac{(y_i-w^T x_i)^2}{\sigma^2}}$\\
+$= \underset{w}{\operatorname{argmin}}  \sum_i^n (y_i-w^Tx_i)^2$
 
 \subsection*{Bias/Variance/Noise}
 Prediction error = $Bias^2 + Variance + Noise$
