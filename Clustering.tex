@@ -1,0 +1,15 @@
+\section*{Clustering}
+\subsection*{k-mean}
+
+$\hat{R}(\mu) = \sum_{i=1}^n \underset{j\in\{1,...k\}}{\operatorname{min}}||x_i-\mu_j||_2^2$\\
+$\hat{\mu} =  \underset{\mu}{\operatorname{argmin}} ~ \hat{R}(\mu)$ (non-convex, NP-hard)\\
+Lloyd's heuristic:\\
+Assignment: $z_i \leftarrow arg \underset{j\in\{1,...,k\}}{min}||x_i - \mu_j^{(t-1)}||_2^2$\\
+Adjustment: $\mu_j^{(t)} \leftarrow \frac{1}{n_j}\sum_{i:z_i=j}x_i$
+
+\subsection*{k-mean++}
+- Start with random data point as center\\
+- Add remaining $k-1$ centers randomly, proportionally to squared distance to closest center\\
+for $j=2$ to $k$:
+$i_j$ sampled with prob.\\
+$P(i_j=i) = \frac{1}{z} \underset{1\leq l<j}{min}||x_i-\mu_l||_2^2$; $\mu_j \leftarrow x_{i_j}$
