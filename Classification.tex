@@ -24,6 +24,10 @@ $\nabla_w l_H(w;y,x) =
 \end{cases}$\\
 $w^* = \underset{w}{\operatorname{argmin}} ~ l_H(w;x_i,y_i) + \lambda||w||_2^2$\\ For L1-SVM (feature selection) use $||w||_1$ 
 
+\subsection*{Multiple classes}
+One-vs-all: $c$ classifiers, could lead to class imbalance, might not be linearly seperable\\
+One-vs-one: $\frac{c(c-1)}{2}$ classifiers
+
 \subsection*{Overview}
 SVM: Maximum margin around separator\\
 Perceptron: Doesn't care about margin\\
